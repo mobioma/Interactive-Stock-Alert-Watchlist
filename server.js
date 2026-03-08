@@ -7,7 +7,7 @@ const fetch = (...args) => import('node-fetch').then(({default: f}) => f(...args
 
 const app = express();
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('__dirname'));
 
 // ─── Data file (simple JSON database) ───────────────────────────
 const DATA_FILE = path.join(__dirname, 'data.json');
